@@ -31,13 +31,6 @@ class Book
     /**
      * @var string
      *
-     * @ORM\Column(name="author", type="text")
-     */
-    private $author;
-
-    /**
-     * @var string
-     *
      * @ORM\Column(name="title", type="text")
      */
     private $title;
@@ -45,7 +38,7 @@ class Book
     /**
      * @var string
      *
-     * @ORM\Column(name="description", type="text")
+     * @ORM\Column(name="description", type="string", length=255)
      */
     private $description;
 
@@ -81,29 +74,6 @@ class Book
     public function getBookId()
     {
         return $this->bookId;
-    }
-
-    /**
-     * Set author
-     *
-     * @param string $author
-     * @return Book
-     */
-    public function setAuthor($author)
-    {
-        $this->author = $author;
-
-        return $this;
-    }
-
-    /**
-     * Get author
-     *
-     * @return string 
-     */
-    public function getAuthor()
-    {
-        return $this->author;
     }
 
     /**
