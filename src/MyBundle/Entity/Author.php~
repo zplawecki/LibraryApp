@@ -103,37 +103,4 @@ class Author
     {
         return $this->name;
     }
-
-    /**
-     * Add books
-     *
-     * @param \MyBundle\Entity\Book $books
-     * @return Author
-     */
-    public function addBook(\MyBundle\Entity\Book $books)
-    {
-        $this->books[] = $books;
-
-        return $this;
-    }
-
-    /**
-     * Remove books
-     *
-     * @param \MyBundle\Entity\Book $books
-     */
-    public function removeBook(\MyBundle\Entity\Book $books)
-    {
-        $this->books->removeElement($books);
-    }
-
-    /**
-     * Get books
-     *
-     * @return \Doctrine\Common\Collections\Collection 
-     */
-    public function getBooks()
-    {
-        return $this->books;
-    }
 }
